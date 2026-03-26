@@ -47,7 +47,7 @@ printf("Escreva a letra do estado seguida de um numero de 01 a 04:" );
 scanf("%s",&carta2);
 printf("Escreva o número de habitantes da cidade: ");
 scanf("%d",&populacao2);
-printf("Escreva A área da cidade em quilômetros quadrad;os:");
+printf("Escreva A área da cidade em quilômetros quadrados:");
 scanf("%f",&area2);
 printf("Escreva o produto interno bruto da cidade:  ");
 scanf("%f",&pib2);
