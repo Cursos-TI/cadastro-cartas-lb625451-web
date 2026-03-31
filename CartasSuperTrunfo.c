@@ -9,6 +9,11 @@ char nome1[20]="igapora";
 int populacao1,turismo1=1000;
 float area1=100.228;
 float pib1=10937.1;
+float superpoder1=187.16;
+float superpoder2=183.36;
+float inversodensidade1=123.262;
+float inversodensidade2=123.262;
+
 //cauculos
 float densidade1,densidade2=189.666;
 float percapita1,percapita2=189.666;
@@ -63,7 +68,10 @@ densidade1=(float)populacao1/area1;
 densidade2=(float)populacao2/area2;
 percapita1=pib1/(float) populacao1;
 percapita2=pib2/(float) populacao2;
-
+inversodensidade1=1.0/densidade1;
+inversodensidade2=1.0/densidade2;
+superpoder1=(float)populacao1+pib1+area1+(float)turismo1+percapita1+inversodensidade1;
+superpoder2=(float)populacao2+pib2+area2+(float)turismo2+percapita2+inversodensidade2;
 //saia de dados da primeira carta  
 
 printf("carta 01:\n");
@@ -74,8 +82,9 @@ printf(" População:%d \n",populacao1 );
 printf(" Área:%3.f \n",area1);
 printf(" PIB:%3.f \n",pib1 );
 printf("Numero de pontos turísticos:%d \n",turismo1 );
-printf("A densidade é %3.f\n",densidade1);
+printf("A densidade populacional é %3.f\n",densidade1);
 printf("O pib per capita é:%3.f\n",percapita1);
+printf("Super poder:%f\n",superpoder1);
 
 //saida de dados da segunda carta
 
@@ -87,8 +96,27 @@ printf(" População:%d\n",populacao2 );
 printf(" Área:%3.f\n",area2 );
 printf(" PIB:%3.f\n",pib2 );
 printf("Numero de pontos turísticos:%d\n",turismo2 );
-printf("A densidade é %3.f\n",densidade2);
+printf("A densidade populacioalé %3.f\n",densidade2);
 printf("O pib per capita é:%3.f\n",percapita2);
+printf("Super poder:%f\n",superpoder2);
+
+
+
+
+//comparaçao
+printf("[1] para sim e [0] para não \n");
+printf("a população da primeira carta é maior?%d\n",populacao1>populacao2);
+printf("a Área da primeira carta é maior?%d\n",area1>area2);
+printf("O pib da primeira carta é maior?%d\n",pib1>pib2);
+printf("Pontos turísticos da primeira carta é maior ?%d\n",turismo1>turismo2);
+printf("a densidade populacional da primeira carta é maior ?%d\n",densidade1>densidade2);
+printf("o pib per capita da primeira carta é maior ?%d\n",percapita1>percapita2);
+printf("o super poder da primera  carta é maior ?%d\n",superpoder1>superpoder2);
+
+
+
+
+
 
 
 
