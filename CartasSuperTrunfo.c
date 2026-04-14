@@ -13,6 +13,7 @@ float superpoder1=187.16;
 float superpoder2=183.36;
 float inversodensidade1=123.262;
 float inversodensidade2=123.262;
+int opcao;
 
 //cauculos
 float densidade1,densidade2=189.666;
@@ -32,7 +33,7 @@ printf("Carta [01]\n");
 printf("Escreva o nome da cidade: \n");
 scanf("%s",nome1);
 printf("Escreva a sigla ,EX:'Ba'(representando o estado):\n ");
-scanf("  %s",&estado1);
+scanf("  %s",estado1);
 printf("Escreva a letra do estado seguida de um numero de 01 a 04:\n" );
 scanf("  %s",carta1);
 printf("Escreva o número de habitantes da cidade:\n ");
@@ -54,7 +55,7 @@ printf("Carta [02]\n");
 printf("Escreva o nome da cidade:\n ");
 scanf("%s",nome2);
 printf("Escreva a sigla, EX:'ba'(representando o estado ):\n ");
-scanf("   %s",&estado2);
+scanf("   %s",estado2);
 printf("Escreva a letra do estado seguida de um numero de 01 a 04:\n" );
 scanf("    %s",carta2);
 printf("Escreva o número de habitantes da cidade: \n");
@@ -94,33 +95,28 @@ scanf("%d",&opcao);
 switch(opcao){
 case 1:
 printf("Dados da primeira carta:\n");
-printf("Carta [01]\n");
-printf("Escreva o nome da cidade: \n");
-scanf("%s",nome1);
-printf("Escreva a sigla ,EX:'Ba'(representando o estado):\n ");
-scanf("  %s",&estado1);
-printf("Escreva a letra do estado seguida de um numero de 01 a 04:\n" );
-scanf("  %s",carta1);
-printf("Escreva o número de habitantes da cidade:\n ");
-scanf("%d",&populacao1);
-printf("Escreva A área da cidade em quilômetros quadrados:\n");
-scanf("%f",&area1);
-printf("Escreva o produto interno bruto da cidade: \n ");
-scanf("%f",&pib1);
-printf("Escreva A quantidade de pontos turísticos na cidade:\n");
-scanf("%d",&turismo1);
+printf("carta 01: \n");
+printf(" Nome da cidade:%s\n",nome1 );
+printf(" Estado:%c\n",estado1);
+printf(" Código:%s\n",carta1 );
+printf(" População:%d\n",populacao1 );
+printf(" Área:%2.f\n",area1 );
+printf(" PIB:%2.f\n",pib1 );
+printf("Numero de pontos turísticos:%d\n",turismo1 );
+printf("A densidade populacioalé %2.f\n",densidade1);
+printf("O pib per capita é:%2.f\n",percapita1);
+printf("Super poder:%f\n",superpoder1);
 printf("\n");
 printf("\n");
 printf("\n");
-
 
 
 break;
 case 2:
-printf("Dados da primeira carta:\n");
+printf("Dados da segunda carta:\n");
 printf("carta 02: \n");
 printf(" Nome da cidade:%s\n",nome2 );
-printf(" Estado:%c\n",estado2 );
+printf(" Estado:%s\n",estado2 );
 printf(" Código:%s\n",carta2 );
 printf(" População:%d\n",populacao2 );
 printf(" Área:%3.f\n",area2 );
@@ -146,18 +142,18 @@ if(populacao1>populacao2){
 printf("Área:\n");
 if(area1>area2){
     printf("Resultado: A carta 1 venceu! \n");
-    printf("Área:%d \n",area1);
+    printf("Área:%.2f \n",area1);
 }else{
     printf("Resultad: A carta 2 venceu!\n");
-    printf("Área:%d \n",area2);
+    printf("Área:%.2f \n",area2);
 }
 printf("PIB:\n");
 if(pib1>pib2){
     printf("Resultado: A carta 1 venceu! \n");
-    printf("PIB:%d \n",pib1);
+    printf("PIB:%f \n",pib1);
 }else{
     printf("Resultad: A carta 2 venceu!\n");
-    printf("PIB:%d \n",pib2);
+    printf("PIB:%f \n",pib2);
 }
 printf("TURISMO:\n");
 if(turismo1>turismo2){
@@ -170,35 +166,33 @@ if(turismo1>turismo2){
 printf("DENSIDADE POPULACIONAL:\n");
 if(densidade1>densidade2){
     printf("Resultado: A carta 1 venceu! \n");
-    printf("DENSIDADE:%d \n",densidade1);
+    printf("DENSIDADE:%f \n",densidade1);
 }else{
     printf("Resultad: A carta 2 venceu!\n");
-    printf("DENSIDADE:%d \n",densidade2);
+    printf("DENSIDADE:%f \n",densidade2);
 }
 printf("PIB PER CAPITA:\n");
 if(percapita1>percapita2){
     printf("Resultado: A carta 1 venceu! \n");
-    printf("PIB PER CAPITA:%d \n",percapita1);
+    printf("PIB PER CAPITA:%f \n",percapita1);
 }else{
     printf("Resultad: A carta 2 venceu!\n");
-    printf("PIB PER CAPITA:%d \n",percapita2);
+    printf("PIB PER CAPITA:%f \n",percapita2);
 }
 printf("super poder:\n");
 if(superpoder1>superpoder2){
     printf("Resultado: A carta 1 venceu! \n");
-    printf("SUPER PODER:%d \n",superpoder1);
+    printf("SUPER PODER:%f \n",superpoder1);
 }else{
     printf("Resultad: A carta 2 venceu!\n");
-    printf("SUPER PODER:%d \n",superpoder2);
+    printf("SUPER PODER:%f \n",superpoder2);
 }
 break;
-default;
+default:{
 printf("saindo do jogo.....\n");
-
 }
 
-
-
+} 
 
 return 0;
-} 
+}
